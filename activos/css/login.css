@@ -1,0 +1,65 @@
+/* Limpiamos margenes y definimos el tipo de letra */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* La tarjeta de container*/
+.container{
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0  10px rgba(0,0,0,0.1);
+    width: 350px;
+    max-width: 400px;
+}
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 28px;
+}
+/*Inputs y Labels (Experiencia de Usuario)*/
+label{
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+}
+input{
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+/* Efecto cuando el usuario hace clic para escribir */
+input:focus {
+    border-color: #28a745; 
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.2);
+}
+/*El Botón (Llamada a la acción)*/
+button{
+    width: 100%;
+    padding: 12px;
+    background: #28a745; 
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+button:hover {
+    background-color: #218838; 
+}
