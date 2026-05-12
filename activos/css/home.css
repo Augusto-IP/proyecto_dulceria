@@ -1,0 +1,27 @@
+/* 1. Definimos el tamaño y posición */
+.sidebar{
+    width: 250px; /* Ancho de la barra lateral */
+    height: 100vh; /* Altura completa de la ventana */
+    position: fixed; /* Fija la barra lateral en su lugar */
+    top: 0; /* Posición desde la parte superior */
+    left: 0; /* Posición desde la izquierda */
+    background-color: #333; /* Color de fondo de la barra lateral */
+    color: white; /* Color del texto en la barra lateral */
+    padding: 20px; /* Espaciado interno */
+}
+
+.menu a{
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+}
+.menu a:hover{
+    background-color: #555; /* Color de fondo al pasar el mouse */
+    padding-left: 35px;
+}
+.active {
+    border-left: 5px solid #d4af37;
+    background: rgba(255, 255, 255, 0.1);
+}
