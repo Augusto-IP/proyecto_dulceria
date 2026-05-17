@@ -1,14 +1,24 @@
 <?php
-// Configuración de la base de datos
-$host = 'localhost';
-$db   = 'dona_solina'; // Nombre de la base de datos que creamos
-$user = 'root';        // Usuario por defecto de XAMPP
-$pass = '';            // Por defecto XAMPP no tiene contraseña
-$charset = 'utf8mb4';
+// Datos de la base de datos
+$host     = 'localhost';
+$db       = 'pasteleria_sistema_db';
+$user     = 'root'; 
+$password = '';    
+$charset  = 'utf8mb4';
+// Crear conexión PDO y exponerla como $pdo
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [
+	PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+	PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+	PDO::ATTR_EMULATE_PREPARES => false,
+];
 
 try {
-    $pdo = new PDO("mysql:host=localhost;dbname=dona_solina", "root", "");
+	$pdo = new PDO($dsn, $user, $password, $options);
 } catch (PDOException $e) {
-    echo "Error de conexión: " . $e->getMessage();
+	// Registrar el error y dejar $pdo en null para que el controlador lo detecte
+	error_log('DB connection error: ' . $e->getMessage());
+	$pdo = null;
 }
+
 ?>
