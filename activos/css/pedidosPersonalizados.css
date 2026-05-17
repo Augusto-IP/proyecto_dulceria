@@ -1,0 +1,336 @@
+/* --- CONFIGURACIÓN GENERAL Y RESET --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- NAVBAR / HEADER --- */
+.navbar {
+    background: #d4526e;
+    padding: 15px 0;
+}
+
+.nav-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* --- CONTENIDO --- */
+.main-content {
+    padding: 40px 20px;
+}
+
+.breadcrumb {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #d4526e;
+    text-decoration: none;
+}
+
+/* --- TARJETAS / SECCIONES --- */
+.card-section {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.title-page {
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.subtitle-page {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+/* --- FORMULARIOS --- */
+.form-style {
+    display: block;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #444;
+}
+
+.required {
+    color: red;
+}
+
+.form-input, .form-select, .form-textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+    border-color: #d4526e;
+    outline: none;
+}
+
+/* --- ZONA DRAG & DROP (IMAGEN) --- */
+.upload-box {
+    border: 2px dashed #d4526e;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    cursor: pointer;
+    background: #fffcfd;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.upload-box:hover, .upload-box.dragover {
+    background: #fdf2f4;
+}
+
+.upload-icon {
+    font-size: 35px;
+    color: #d4526e;
+    margin-bottom: 8px;
+}
+
+.upload-text {
+    font-size: 13px;
+    color: #555;
+    margin: 0;
+}
+
+.upload-text .highlight {
+    color: #d4526e;
+}
+
+.upload-subtext {
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+.hide-input {
+    display: none;
+}
+
+.preview-box {
+    display: none;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.preview-img {
+    max-width: 100%;
+    max-height: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-remove-img {
+    margin-top: 10px;
+    padding: 6px 15px;
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* --- BOTÓN SUBMIT --- */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 6px;
+    background: #d4526e;
+    color: white;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
+.btn-submit:hover {
+    background: #c0435d;
+}
+
+/* --- ALERTAS --- */
+.alert {
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.alert-exito { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.alert-error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+.alert-advertencia { background: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+
+/* --- TABLAS --- */
+.history-title {
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 30px;
+    color: #999;
+}
+
+.empty-state i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    display: block;
+    color: #ccc;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table-style {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table-style th {
+    background: #f8f9fa;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #eee;
+    color: #555;
+}
+
+.table-style td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.table-price {
+    color: #d4526e;
+    font-weight: 600;
+}
+
+/* --- BADGES (ESTADOS) --- */
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.badge-pendiente-revision { background: #ffeaa7; color: #856404; }
+.badge-aprobado { background: #d1e7dd; color: #0f5132; }
+
+/* --- FOOTER --- */
+.site-footer {
+    background: #333;
+    color: white;
+    padding: 30px 0 15px;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.footer-grid h4 {
+    margin-bottom: 15px;
+    color: #d4526e;
+}
+
+.footer-grid p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.socials a {
+    color: white;
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.site-copyright {
+    text-align: center;
+    border-top: 1px solid #444;
+    margin-top: 25px;
+    padding-top: 15px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
